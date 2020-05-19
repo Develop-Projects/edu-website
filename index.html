@@ -1,12 +1,133 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EduSite</title>
-	<link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/Login.css" >
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <title>EduSite | Welcome</title>
 </head>
-	<body>
-		<h1> EduSite </h1>
-	</body>
+<body class="animated fadeInDown delay-0.5s slower">
+    <nav id="navbar">
+            <div class="container">
+                <h1 class="logo animated bounce"><a href="index.html">EduSite</a></h1>
+                <ul>
+                    <li><a class="current" href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Courses</a>
+                        <!-- dropdown list on courses menu!-->
+                        <div class="dropdown-content">
+                            <a href="#">Java</a>
+                            <a href="#">HTML</a>
+                            <a href="#">CSS</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li class="btn-login" onclick="openLoginForm()"> Login/Sign Up </li>
+                </ul>
+            </div>
+    </nav>
+    <!-- Adeola's responsive login form !-->
+             <div id="loginForm" class="login-popup-form animate wobble">
+             <div class="center">
+                <div class="login-form-header">
+                    <h2>Login</h2>
+                    <span><a onclick="closeLoginForm()">X</a></span>                    
+                </div>
+                    <form method="post">
+                        <div class="txt_field">
+                            <input type="text" required>
+                            <span></span>
+                            <label>Username</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="password" required>
+                            <span></span>
+                            <label>Password</label>
+                        </div>
+                        <div class="pass">Forgot Password</div>
+                        <input class="log" type="submit" value="Login">
+                          <p class="remember_me">
+                            <label>
+                              <input type="checkbox" name="remember_me" id="remember_me">
+                              Remember me
+                            </label>
+                          </p>
+                        <div class="signup_link">
+                            Not a member? <a href="#">Signup</a>
+                        </div>
+                    </form>
+             </div>
+             </div>
+
+    <header>
+        <div id="showcase">
+            <div class="container">
+                <div class="showcase-content">
+                    <h1><span class="text-primary">Welcome</span> to EduSite</h1>
+                    <p class="lead">Here, we have provided an array of well structured courses, to ensure a great and satisfactory learning experience for every student.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="home_info" class="bg-dark">
+        <div class="info-img"></div>
+        <div class="info-content">
+            <h2><span class="text-primary">About</span> Us</h2>
+            <p>
+                We are 'The Futurers'. A group of students who came together to develop something for our fellow students to aid in learning to program in a way that we never learned to. We are a 6-man team inncluding, Adeola, Odelola Joshua, Tomisin Sanni, AbdulKabir, Micheal and Olamide. We sincerely we fulfill your expectations of our site. Enjoy!
+                </p>
+            <a href="#" class="btn btn-light">Read More</a>
+        </div>
+    </section>
+    <section id="features">
+        <div class="box bg-light">
+            <i class="quality-icon"></i>
+            <h3>Quality Content</h3>
+        </div>
+        <div class="box bg-primary">
+            <i class="mobile-icon"></i>
+            <h3>Mobile Compatible</h3>
+        </div>
+        <div class="box bg-light">
+            <i class="info-icon"></i>
+            <h3>Robust Information</h3>
+        </div>
+    </section>
+    <section id="contact-form" class="py-3">
+    <div class="contact-container">
+        <h1 class="l-heading"><span class="text-primary">Subscribe</span> Now</h1>
+        <p>Please fill out the form below to get updates on our latest courses.</p>
+        <form action="process.php">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>    
+    </div>
+    </section>
+    <div class="clr"></div>
+    <footer id="main-footer">
+        <p>The Futurers &copy; 2020, All Rights Reserved</p>
+    </footer>
+</body>
+<script>
+    function openLoginForm(){
+        document.getElementById("loginForm").style.display = "block";
+    }
+
+    function closeLoginForm(){
+        document.getElementById("loginForm").style.display = "none";
+    }
+</script>    
 </html>
